@@ -3,7 +3,7 @@ html {
   }
   
   :root {
-    --primary: rgba(252, 126, 215, 1);
+    --primary: #fc7ed7;
     --spacing: 4rem;
   }
   
@@ -12,6 +12,7 @@ html {
     overflow-x: hidden;
     margin: 0;
     color: #555555;
+    background-color: #D7FDF0
   }
   
   header {
@@ -106,7 +107,85 @@ html {
   }
 
   #header {
-   background-image:url(https://sadhost.neocities.org/images/tiles/anachdruk28background.gif)
+   background-image:url(https://sadhost.neocities.org/images/tiles/anachdruk28background.gif);
+   background-color: var(--primary);
+   mask-image: linear-gradient(to top, transparent 5%, black 15%);
+   -webkit-mask-image: linear-gradient(to top, transparent 5%, black 15%);
+  }
+
+  #aboutMe {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  #selfie {
+    width: 40%;
+    align-self: flex-start;
+    outline: solid 5px #FC5185;
+    animation-name: colorChangeOutline;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: box-shadow 2s ease-out;
+  }
+
+  #selfie:hover {
+    -webkit-box-shadow: 0px 0px 32px 10px rgba(40, 65, 74, 1);
+    -moz-box-shadow: 0px 0px 32px 10px rgba(40, 65, 74, 1);
+    box-shadow: 0px 0px 32px 10px rgba(40, 65, 74, 1);
+  }
+
+  .sectionHeading {
+    text-decoration: underline 5px;
+    text-underline-offset: .25em;
+    align-self: flex-end;
+    animation-name: colorChangeText;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+  }
+  .aboutFlex {
+    display: flex;
+  }
+
+  #aboutMePara {
+    font-size: 2.5vw;
+    text-align: right;
+    align-self: center;
+  }
+
+
+  @keyframes colorChangeText {
+    0%   {color: rgba(252, 126, 215, 1);}
+    25%  {color: purple;}
+    50%  {color: blue;}
+    100% {color: rgba(252, 126, 215, 1);}
+  }
+
+  @keyframes colorChangeOutline {
+    0%   {outline: rgba(252, 126, 215, 1) solid 5px;}
+    25%  {outline: purple solid 5px;}
+    50%  {outline: blue solid 5px;}
+    100% {outline: rgba(252, 126, 215, 1) solid 5px;}
   }
   
- 
+  @media only screen and (max-width: 600px) {
+    
+    #selfie { 
+        width:60%;
+        align-self: auto
+    }
+    .sectionHeading {
+        align-self: auto;
+      }
+    .aboutFlex {
+        flex-direction: column;
+        align-items: center;
+    }
+    #aboutMePara {
+        font-size: 4vw;
+        text-align: center;
+    }
+  }
