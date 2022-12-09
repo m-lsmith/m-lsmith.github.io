@@ -89,6 +89,33 @@ html {
   .header-highlight {
     color: var(--primary);
   }
+
+  .underline {
+    text-decoration: none;
+    position: relative;
+  }
+
+  .underline::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    
+    bottom: -4px;
+    left: 0;
+    background: var(--primary);
+    animation-name: underline;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+
+  }
+
+  @keyframes underline {
+    0% {width: 0%}
+    100% {width: 100%}
+    
+  }
   
   .header-link {
     display: flex;
@@ -131,9 +158,9 @@ html {
     width: 50%;
     align-self: flex-start;
     outline: solid 5px #FC5185;
-    animation-name: fadeIn, colorChangeOutline;
-    animation-duration: 2s, 4s;
-    animation-iteration-count: 1, infinite;
+    animation-name: colorChangeOutline;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     transition: box-shadow 2s ease-out;
   }
 
@@ -147,10 +174,10 @@ html {
     text-decoration: underline 5px;
     text-underline-offset: .25em;
     align-self: flex-end;
-    animation-name: fadeIn, colorChangeText;
-    animation-duration: 2s, 4s;
-    animation-iteration-count: 1, infinite;
-    animation-delay: 0.8s
+    animation-name: colorChangeText;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 0
   }
   .aboutFlex {
     display: flex;
@@ -160,9 +187,6 @@ html {
     font-size: 2vw;
     text-align: right;
     align-self: center;
-    animation-duration: 2s;
-    animation-name: fadeIn;
-    animation-delay: 1s;
   }
 
   .delay-1 {
