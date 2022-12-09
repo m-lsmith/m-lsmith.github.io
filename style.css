@@ -48,6 +48,11 @@ html {
    -webkit-box-shadow: 8px 8px 3px 5px rgba(252, 126, 215, 1);
    -moz-box-shadow: 8px 8px 3px 5px rgba(252, 126, 215, 1);
     box-shadow: 8px 8px 3px 5px rgba(252, 126, 215, 1);
+    animation-name: popIn;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+    animation-fill-mode: forwards;
   }
   
   
@@ -126,9 +131,9 @@ html {
     width: 50%;
     align-self: flex-start;
     outline: solid 5px #FC5185;
-    animation-name: colorChangeOutline;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation-name: fadeIn, colorChangeOutline;
+    animation-duration: 2s, 4s;
+    animation-iteration-count: 1, infinite;
     transition: box-shadow 2s ease-out;
   }
 
@@ -142,9 +147,10 @@ html {
     text-decoration: underline 5px;
     text-underline-offset: .25em;
     align-self: flex-end;
-    animation-name: colorChangeText;
-    animation-duration: 4s;
-    animation-iteration-count: infinite
+    animation-name: fadeIn, colorChangeText;
+    animation-duration: 2s, 4s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0.8s
   }
   .aboutFlex {
     display: flex;
@@ -154,9 +160,22 @@ html {
     font-size: 2vw;
     text-align: right;
     align-self: center;
+    animation-duration: 2s;
+    animation-name: fadeIn;
+    animation-delay: 1s;
   }
 
+  .delay-1 {
+    animation-delay: 0.6s;
+  }
+  .delay-2 {
+    animation-delay: 0.7s;
+  }
+  .delay-3 {
+    animation-delay: 0.8s;
+  }
 
+   
   @keyframes colorChangeText {
     0%   {color: rgba(252, 126, 215, 1);}
     25%  {color: purple;}
@@ -169,6 +188,22 @@ html {
     25%  {outline: purple solid 5px;}
     50%  {outline: blue solid 5px;}
     100% {outline: rgba(252, 126, 215, 1) solid 5px;}
+  }
+
+  @keyframes popIn { 
+    0% {
+        opacity: 0; 
+        transform: scale(0.5, 0.5);}
+    100% {
+        opacity: 1; 
+        transform: scale(1, 1);}
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0; }
+    100% {
+        opacity: 1; }
   }
   
   @media only screen and (max-width: 600px) {
