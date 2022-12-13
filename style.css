@@ -187,6 +187,7 @@ html {
     font-size: 2vw;
     text-align: right;
     align-self: center;
+    margin-left: 10px;
   }
 
   .icon {
