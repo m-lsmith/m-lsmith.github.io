@@ -98,11 +98,11 @@ html {
   .underline::after {
     position: absolute;
     content: '';
-    height: 2px;
-    
+    height: 4px;
     bottom: -4px;
     left: 0;
     background: var(--primary);
+
     animation-name: underline;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
@@ -187,6 +187,12 @@ html {
     font-size: 2vw;
     text-align: right;
     align-self: center;
+  }
+
+  .icon {
+    width: 10%;
+    height: auto;
+    margin: 5px;
   }
 
   .delay-1 {
