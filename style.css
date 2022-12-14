@@ -146,7 +146,7 @@ html {
   }
 
   #aboutMe {
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,6 +181,10 @@ html {
   }
   .aboutFlex {
     display: flex;
+  }
+
+  #aboutMe {
+    padding-bottom: 10%;
   }
 
   #aboutMePara {
