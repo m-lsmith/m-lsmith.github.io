@@ -4,56 +4,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" href="/images/favicon.ico">
+    <link
+      rel="icon"
+      href="favicon.ico"
+      type="image/x-icon"
+      href="/images/favicon.ico"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
       rel="stylesheet"
     />
-    <title> 🫀 Maddy Smith </title>
-     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>🫀 Maddy Smith</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
-<body>
+  <body>
     <header id="header" class="neutral-theme">
-     <div id="introBox">
-      <h1>
-        <div>
+      <div id="introBox">
+        <h1>
           <div>
-            Hello! My name is
-            <span class="header-highlight underline">Maddy Smith</span>.<br />I'm a
-            Front-end Web Developer
+            <div>
+              Hello! My name is
+              <span class="header-highlight underline">Maddy Smith</span
+              >.<br />I'm a Front-end Web Developer
+            </div>
           </div>
-        </div>
-      </h1>
-      <a href="#aboutMe" class="button header-link">Find out more</a>
+        </h1>
+        <a href="#aboutMe" class="button header-link">Find out more</a>
       </div>
     </header>
-    
-    <section id="aboutMe">
-        <h1 class="sectionHeading">
-            About Me
-        </h1>
-        <div class="aboutFlex">
-            <img id="selfie" src="/Images/selfie.jpg" class="">
-            <div id="aboutMePara">
-             <p class="">Hi there! I'm a British developer living in Warsaw. I love to create front end designs
-              that test and grow my knowledge. I'm currently teaching myself React!
-             </p>
-             <div>
-              <div>
-                <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
-                <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-              </div>
-             </div>
-             </div>
+
+    <section id="aboutMe" class="neutral-theme">
+      <h2 class="sectionHeading">About Me</h2>
+
+      <img id="selfie" src="/Images/selfie.jpg" />
+      <div id="aboutMePara">
+        <p class="">
+          Hi there! I'm a British developer living in Warsaw. I love to create
+          fun and engaging websites. I'm currently teaching myself React!
+        </p>
+
+        <div id="iconTray">
+          <img
+            class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          />
+          <img
+            class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+          />
+          <img
+            class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+          />
+          <img
+            class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          />
         </div>
+        
+      </div>
+      <a href="#projects" class="button header-link">My Projects</a>
     </section>
 
     <section id="projects">
-
+      <div id="wrapperGallery">
+        <h2>My Projects</h2>
+        <div id="gallery">
+          <ul class="image-gallery">
+            <li>
+              <a href="https://cocktail-generator.pages.dev/"
+                ><img src="/Images/cocktail screenshot.png" alt="" />
+              </a>
+              <p>
+                A single page VueJS app that connects to the CocktailDB to
+                produce information about a random cocktail. Information
+                includes: photo, primary ingredient, name, and serving glass.
+              </p>
+            </li>
+            <li>
+              <a href="https://muzeumodnalezionych.neocities.org/"
+                ><img src="/Images/screenshot museum.png" alt="" />
+              </a>
+              <p>
+                A website for a fictitious museum, designed in a web 1.0 style.
+                Comissioned for a university project.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
-     
-</body>
+  </body>
+</html>
